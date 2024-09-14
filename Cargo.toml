@@ -1,0 +1,18 @@
+[package]
+name = "vm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "vm"
+
+[dependencies]
+actix-web = "4"
+reqwest = "0.12.7"
+rusty_v8 = "0.32.1"
+serde = { version = "1", features = ["derive"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
